@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="723.0" prefWidth="974.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cookbook.frontend.AppController">
+    <children>
+        <TextField fx:id="search" layoutX="17.0" layoutY="17.0" onAction="#SearchAction" prefHeight="51.0" prefWidth="241.0" promptText="Search" style="-fx-border-style: solid; -fx-border-color: #2B7CDB; -fx-border-width: 2.92233;" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="30.0">
+            <font>
+                <Font name="Poppins" size="18.0" />
+            </font>
+            <padding>
+                <Insets left="45.0" />
+            </padding>
+        </TextField>
+        <CheckBox fx:id="favoriteChck" layoutX="10.0" layoutY="92.0" mnemonicParsing="false" onAction="#starred" prefHeight="39.0" prefWidth="195.0" text="Favourites only" textFill="#575454" AnchorPane.leftAnchor="10.0">
+            <font>
+                <Font name="Poppins" size="18.0" />
+            </font>
+        </CheckBox>
+        <Label fx:id="recipeNameLabel" layoutX="290.0" layoutY="5.0" prefHeight="56.0" prefWidth="656.0" style="-fx-font-weight: 600; -fx-border-color: #ffffff;" text="Recipe Name" AnchorPane.topAnchor="30.0">
+            <font>
+                <Font name="Poppins" size="22.0" />
+            </font>
+        </Label>
+        <TableView fx:id="recipeLst" layoutX="0.0" layoutY="143.0" onMouseClicked="#displaySelected" prefHeight="546.0" prefWidth="241.0" style="-fx-background-color: transparent;" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="723.0" styleClass="noheader">
+            <columns>
+                <TableColumn fx:id="recipeCol" prefWidth="241.0" text="Recipe" />
+            </columns>
+            <padding>
+                <Insets left="5.0" top="5.0" />
+            </padding>
+        </TableView>
+        <ScrollPane fx:id="mainScrollPane" layoutX="290.0" layoutY="80.0" prefHeight="608.0" prefWidth="665.0">
+            <content>
+                <VBox fx:id="vbox" prefHeight="787.0" prefWidth="650.0" style="-fx-background-color: white; -fx-border-color: #ffffff;">
+                    <children>
+                        <HBox prefHeight="48.0" prefWidth="650.0" style="-fx-border-color: #ffffff;">
+                            <children>
+                                <Label prefHeight="37.0" prefWidth="73.0" style="-fx-border-width: 2.92233;" text="TAGS:" textFill="#2b7cdb">
+                                    <font>
+                                        <Font name="Poppins" size="14.0" />
+                                    </font>
+                                    <padding>
+                                        <Insets bottom="10.0" right="10.0" top="10.0" />
+                                    </padding>
+                                    <HBox.margin>
+                                        <Insets top="4.0" />
+                                    </HBox.margin>
+                                </Label>
+                                <Text fx:id="tagText" strokeType="OUTSIDE" strokeWidth="0.0">
+                                    <font>
+                                        <Font name="Poppins" size="14.0" />
+                                    </font>
+                                    <HBox.margin>
+                                        <Insets top="12.0" />
+                                    </HBox.margin>
+                                </Text>
+                            </children>
+                            <VBox.margin>
+                                <Insets top="10.0" />
+                            </VBox.margin>
+                        </HBox>
+                        <Text fx:id="shortDesText" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="500">
+                            <VBox.margin>
+                                <Insets bottom="0.0" top="-10.0" />
+                            </VBox.margin>
+                            <font>
+                                <Font name="Poppins" size="16.0" />
+                            </font>
+                        </Text>
+                        <HBox alignment="CENTER_LEFT" prefHeight="38.0" prefWidth="650.0">  
+                            <children>
+                                <Button fx:id="toggleFavouriteBtn" mnemonicParsing="false" onAction="#addfavorite" prefHeight="31.0" prefWidth="53.0" style="-fx-background-color: transparent;">
+                                    <font>
+                                        <Font name="Poppins" size="21.0" />
+                                    </font>
+                                    <graphic>
+                                        <ImageView fx:id="favImageView" fitHeight="24.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../images/Untitled.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                </Button>
+                                <Button mnemonicParsing="false" onAction="#sendMessageBtnAction" prefHeight="38.0" prefWidth="55.0" style="-fx-background-color: transparent;">
+                                    <graphic>
+                                        <ImageView fitHeight="30.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../images/boxicons/bx-mail-send.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                </Button>
+                                <DatePicker fx:id="myDatePicker" onAction="#datePicker" prefHeight="30.0" prefWidth="179.0">
+                                    <HBox.margin>
+                                        <Insets left="30.0" />
+                                    </HBox.margin>
+                                </DatePicker>
+                                <Button mnemonicParsing="false" onAction="#addDateButton" prefHeight="30.0" prefWidth="131.0" style="-fx-background-color: #2B7CDB;" text="Add to dinner list" textFill="#faf5f5">
+                                    <HBox.margin>
+                                        <Insets left="10.0" />
+                                    </HBox.margin>
+                                </Button>
+                            </children>
+                        </HBox>
+                        <Label prefHeight="38.0" prefWidth="120.0" text="INGREDIENTS" textFill="#2b7cdb">
+                            <font>
+                                <Font name="Poppins" size="14.0" />
+                            </font>
+                            <padding>
+                                <Insets bottom="10.0" top="10.0" />
+                            </padding>
+                        </Label>
+                        <HBox>
+                            <Button contentDisplay="CENTER" mnemonicParsing="false" onAction="#onDecreasePortions" style="-fx-border-color: #2B7CDB; -fx-background-color: #2B7CDB;" text="-" textFill="#faf5f5" prefHeight="30.0" prefWidth="50.0">
+                                <padding>
+                                    <Insets left="10.0" />
+                                </padding>
+                            </Button>
+                            <Label fx:id="portionsLabel" alignment="CENTER" prefHeight="38.0" prefWidth="70.0" text="1">
+                                <font>
+                                    <Font name="Poppins" size="14.0" />
+                                </font>
+                                <padding>
+                                    <Insets bottom="10.0" top="10.0" />
+                                </padding>
+                            </Label>
+                            <Button mnemonicParsing="false" onAction="#onIncreasePortions" style="-fx-border-color: #2B7CDB; -fx-background-color: #2B7CDB;" text="+" textFill="#faf5f5" prefHeight="30.0" prefWidth="50.0" />
+                        </HBox>
+                        <Text fx:id="ingredText" strokeType="OUTSIDE" strokeWidth="0.0">
+                            <VBox.margin>
+                                <Insets top="5.0" />
+                            </VBox.margin>
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </Text>
+                        <Label prefHeight="37.0" prefWidth="113.0" text="STEPS" textFill="#2b7cdb">
+                            <font>
+                                <Font name="Poppins" size="14.0" />
+                            </font>
+                            <opaqueInsets>
+                                <Insets />
+                            </opaqueInsets>
+                            <padding>
+                                <Insets top="10.0" />
+                            </padding>
+                        </Label>
+                        <Text fx:id="longdesText" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="500">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                        </Text>
+                        <Label prefHeight="17.0" prefWidth="96.0" text="COMMENTS" textFill="#2b7cdb">
+                            <font>
+                                <Font name="Poppins" size="14.0" />
+                            </font>
+                            <VBox.margin>
+                                <Insets bottom="5.0" />
+                            </VBox.margin>
+                        </Label>
+                        <HBox prefHeight="22.0" prefWidth="700.0">
+                            <children>
+                                <TextField fx:id="addCmntText" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="454.0" promptText="Comment..." style="-fx-border-color: #2B7CDB; -fx-border-width: 2.92233;">
+                                    <font>
+                                        <Font name="Poppins" size="13.0" />
+                                    </font>
+                                    <padding>
+                                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                    </padding>
+                                </TextField>
+                                <Button fx:id="addCommentBtn" mnemonicParsing="false" onAction="#addCommentBtn" prefHeight="42.0" prefWidth="66.0" style="-fx-background-color: transparent;">
+                                    <graphic>
+                                        <ImageView fitHeight="32.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../images/boxicons/right-arrow-alt-regular-24.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                </Button>
+                            </children>
+                        </HBox>
+                        <HBox prefHeight="104.0" prefWidth="650.0">
+                            <VBox.margin>
+                                <Insets />
+                            </VBox.margin>
+                            <children>
+                                <ListView fx:id="comntlist" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#onReviewClicked" prefHeight="111.0" prefWidth="600.0">
+                                    <padding>
+                                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                    </padding>
+                                    <HBox.margin>
+                                        <Insets bottom="5.0" top="10.0" />
+                                    </HBox.margin>
+                                </ListView>
+                            </children>
+                        </HBox>
+                        <HBox prefHeight="83.0" prefWidth="659.0">
+                            <children>
+                                <Button fx:id="editCommentBtn" mnemonicParsing="false" onAction="#editCommentAction" prefHeight="25.0" prefWidth="145.0" style="-fx-background-color: #2B7CDB;" text="EDIT COMMENT " textFill="#faf5f5" visible="false">
+                                    <HBox.margin>
+                                        <Insets top="15.0" bottom="50.0" />
+                                    </HBox.margin>
+                                </Button>
+                                <Button fx:id="deleteButtonBtn" mnemonicParsing="false" onAction="#deleteCmntBtn" prefHeight="25.0" prefWidth="151.0" style="-fx-background-color: #2B7CDB;" text="DELETE COMMENT" textFill="#faf5f5" visible="false">
+                                    <HBox.margin>
+                                        <Insets left="15.0" bottom="50.0" top="15.0" />
+                                    </HBox.margin>
+                                </Button>
+                            </children>
+                        </HBox>
+
+                    </children>
+                </VBox>
+            </content>
+        </ScrollPane>
+        <Separator layoutX="255.0" orientation="VERTICAL" prefHeight="723.0" prefWidth="14.0" AnchorPane.leftAnchor="255.0" AnchorPane.rightAnchor="705.0" />
+        <ImageView fitHeight="32.0" fitWidth="36.0" layoutX="24.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../images/search.PNG" />
+            </image>
+        </ImageView>
+    </children>
+</AnchorPane>

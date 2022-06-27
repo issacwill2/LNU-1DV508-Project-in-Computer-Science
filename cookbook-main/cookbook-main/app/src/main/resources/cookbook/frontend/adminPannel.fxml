@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="578.0" prefWidth="839.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="cookbook.frontend.AdminPannelContraller">
+   <children>
+      <TableView fx:id="userList" layoutX="19.0" layoutY="40.0" onMouseClicked="#displaySelected" prefHeight="475.0" prefWidth="203.0" style="-fx-background-color: transparent;" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="40.0">
+        <columns>
+        <TableColumn fx:id="displayNameColumn" prefWidth="201.0" resizable="false" text="Users" />
+        </columns>
+      </TableView>
+      <Button layoutX="510.0" layoutY="339.0" mnemonicParsing="false" onAction="#Addbutton" prefHeight="36.0" prefWidth="125.0" style="-fx-background-color: #2B7CDB;" text="CREATE NEW" textFill="#faf5f5">
+         <font>
+            <Font name="Poppins" size="14.0" />
+         </font></Button>
+      <Button layoutX="369.0" layoutY="339.0" mnemonicParsing="false" onAction="#deleteButtun" prefHeight="36.0" prefWidth="125.0" style="-fx-background-color: #2B7CDB;" text="DELETE" textFill="#faf5f5">
+         <font>
+            <Font name="Poppins" size="14.0" />
+         </font></Button>
+      <Button layoutX="231.0" layoutY="339.0" mnemonicParsing="false" onAction="#ModifyButton" prefHeight="36.0" prefWidth="125.0" style="-fx-background-color: #2B7CDB;" text="MODIFY" textFill="#faf5f5">
+         <font>
+            <Font name="Poppins" size="14.0" />
+         </font></Button>
+      <Label layoutX="231.0" layoutY="42.0" prefHeight="27.0" prefWidth="179.0" text="Username" AnchorPane.topAnchor="40.0">
+         <font>
+            <Font name="Poppins" size="18.0" />
+         </font></Label>
+      <Label layoutX="231.0" layoutY="138.0" prefHeight="27.0" prefWidth="197.0" text="Display name">
+         <font>
+            <Font name="Poppins" size="18.0" />
+         </font></Label>
+      <Label layoutX="231.0" layoutY="247.0" prefHeight="27.0" prefWidth="149.0" text="Password">
+         <font>
+            <Font name="Poppins" size="18.0" />
+         </font></Label>
+      <TextField fx:id="txtUserName" layoutX="231.0" layoutY="73.0" prefHeight="36.0" prefWidth="227.0" style="-fx-border-color: #2B7CDB; -fx-border-style: solid; -fx-border-width: 2.92233;" styleClass="-fx-border-color">
+         <font>
+            <Font name="Poppins" size="14.0" />
+         </font>
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+      </TextField>
+      <TextField fx:id="txtPassword" layoutX="231.0" layoutY="284.0" prefHeight="36.0" prefWidth="227.0" style="-fx-border-color: #2B7CDB; -fx-border-style: solid; -fx-border-width: 2.92233;" styleClass="-fx-border-color">
+         <font>
+            <Font name="Poppins" size="14.0" />
+         </font>
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+      </TextField>
+      <TextField fx:id="txtDisplayName" layoutX="231.0" layoutY="177.0" prefHeight="36.0" prefWidth="227.0" style="-fx-border-color: #2B7CDB; -fx-border-style: solid; -fx-border-width: 2.92233;" styleClass="-fx-border-color">
+         <font>
+            <Font name="Poppins" size="14.0" />
+         </font>
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+      </TextField>
+      <Separator layoutX="214.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="728.0" prefWidth="11.0" />
+   </children>
+</AnchorPane>

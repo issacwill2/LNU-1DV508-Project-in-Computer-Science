@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="stages" prefHeight="723.0" prefWidth="1063.0" xmlns="http://javafx.com/javafx/" xmlns:fx="http://javafx.com/fxml" fx:controller="cookbook.frontend.WeekListController">
+   <children>
+      <ListView fx:id="thursdayListView" layoutX="726.0" layoutY="231.0" prefHeight="186.0" prefWidth="220.0" style="-fx-border-color: #2B7CDB; -fx-border-width: 2.92233;" AnchorPane.topAnchor="231.0" />
+      <Label layoutX="726.0" layoutY="178.0" prefHeight="54.0" prefWidth="220.0" style="-fx-border-style: solid; -fx-border-color: #2B7CDB; -fx-border-width: 2.92233;" text="Thursday">
+         <font>
+            <Font name="Poppins" size="18.0" />
+         </font>
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+      </Label>
+      <ListView fx:id="WednesdayListView" layoutX="486.0" layoutY="231.0" prefHeight="186.0" prefWidth="220.0" style="-fx-border-color: #2B7CDB; -fx-border-width: 2.92233;" />
+      <Label layoutX="486.0" layoutY="178.0" prefHeight="54.0" prefWidth="220.0" style="-fx-border-style: solid; -fx-border-color: #2B7CDB; -fx-border-width: 2.92233;" text="Wednesday">
+         <font>
+            <Font name="Poppins" size="18.0" />
+         </font>
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+      </Label>
+      <ListView fx:id="tuesdayListView" layoutX="247.0" layoutY="231.0" prefHeight="186.0" prefWidth="220.0" style="-fx-border-color: #2B7CDB; -fx-border-width: 2.92233;" />
+      <Label layoutX="247.0" layoutY="178.0" prefHeight="54.0" prefWidth="220.0" style="-fx-border-style: solid; -fx-border-color: #2B7CDB; -fx-border-width: 2.92233;" text="Tuesday">
+         <font>
+            <Font name="Poppins" size="18.0" />
+         </font>
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+      </Label>
+      <ListView fx:id="mondayListView" layoutX="7.0" layoutY="231.0" prefHeight="186.0" prefWidth="220.0" style="-fx-border-color: #2B7CDB; -fx-border-width: 2.92233;" AnchorPane.leftAnchor="10.0" />
+      <Label layoutX="7.0" layoutY="178.0" prefHeight="54.0" prefWidth="220.0" style="-fx-border-style: solid; -fx-border-color: #2B7CDB; -fx-border-width: 2.92233;" text="Monday" AnchorPane.leftAnchor="10.0">
+         <font>
+            <Font name="Poppins" size="18.0" />
+         </font>
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+      </Label>
+      <ListView fx:id="fridayListView" layoutX="7.0" layoutY="492.0" prefHeight="186.0" prefWidth="220.0" style="-fx-border-color: #2B7CDB; -fx-border-width: 2.92233;" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="492.0" />
+      <Label layoutX="7.0" layoutY="439.0" prefHeight="54.0" prefWidth="220.0" style="-fx-border-style: solid; -fx-border-color: #2B7CDB; -fx-border-width: 2.92233;" text="Friday" AnchorPane.leftAnchor="10.0">
+         <font>
+            <Font name="Poppins" size="18.0" />
+         </font>
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+      </Label>
+      <ListView fx:id="saturdayListView" layoutX="247.0" layoutY="492.0" prefHeight="186.0" prefWidth="220.0" style="-fx-border-color: #2B7CDB; -fx-border-width: 2.92233;" AnchorPane.topAnchor="492.0" />
+      <Label layoutX="247.0" layoutY="439.0" prefHeight="54.0" prefWidth="220.0" style="-fx-border-style: solid; -fx-border-color: #2B7CDB; -fx-border-width: 2.92233;" text="Saturday">
+         <font>
+            <Font name="Poppins" size="18.0" />
+         </font>
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+      </Label>
+      <ListView fx:id="sundayListView" layoutX="486.0" layoutY="492.0" prefHeight="186.0" prefWidth="220.0" style="-fx-border-color: #2B7CDB; -fx-border-width: 2.92233;" AnchorPane.topAnchor="492.0" />
+      <Label layoutX="486.0" layoutY="439.0" prefHeight="54.0" prefWidth="220.0" style="-fx-border-style: solid; -fx-border-color: #2B7CDB; -fx-border-width: 2.92233;" text="Sunday" AnchorPane.topAnchor="439.0">
+         <font>
+            <Font name="Poppins" size="18.0" />
+         </font>
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+      </Label>
+      <Label layoutX="10.0" layoutY="23.0" prefHeight="45.0" prefWidth="233.0" text="Dinner list" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="30.0">
+         <font>
+            <Font name="Poppins" size="30.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="weeksComboxBox" layoutX="7.0" layoutY="98.0" prefHeight="45.0" prefWidth="220.0" promptText="Week" style="-fx-border-color: #2B7CDB; -fx-border-width: 2.92233;" AnchorPane.leftAnchor="10.0" />
+      <Label fx:id="Weeklabel" layoutX="247.0" layoutY="110.0" prefHeight="24.0" prefWidth="220.0">
+         <font>
+            <Font name="Poppins" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="767.0" layoutY="525.0" text="Shopping list">
+         <font>
+            <Font name="Poppins" size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="openShopp" layoutX="773.0" layoutY="585.0" mnemonicParsing="false" onAction="#openShoppingList" prefHeight="35.0" prefWidth="127.0" style="-fx-background-color: #2B7CDB;" text="GENERATE" textFill="#faf5f5">
+         <font>
+            <Font name="Poppins" size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

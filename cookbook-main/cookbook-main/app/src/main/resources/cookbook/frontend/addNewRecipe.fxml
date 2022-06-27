@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="903.0" prefWidth="837.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cookbook.frontend.AddNewRecipeController">
+    <children>
+        <Label layoutX="11.0" layoutY="35.0" prefHeight="45.0" prefWidth="308.0" text="Add new recipe " AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="30.0">
+            <font>
+                <Font name="Poppins" size="30.0" />
+            </font>
+        </Label>
+        <Label layoutX="13.0" layoutY="82.0" prefHeight="23.0" prefWidth="137.0" text="Recipe Name" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="82.0">
+            <font>
+                <Font name="Poppins" size="18.0" />
+            </font></Label>
+        <TextField fx:id="recipeName" layoutX="13.0" layoutY="115.0" prefHeight="45.0" prefWidth="219.0" style="-fx-border-color: #2B7CDB; -fx-border-width: 2.92233;" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="115.0" />
+        <Label layoutX="13.0" layoutY="168.0" prefHeight="27.0" prefWidth="155.0" text="Short description" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="168.0">
+            <font>
+                <Font name="Poppins" size="18.0" />
+            </font></Label>
+        <Label layoutX="252.0" layoutY="168.0" prefHeight="27.0" prefWidth="315.0" text="Long description with steps" AnchorPane.topAnchor="168.0">
+            <font>
+                <Font name="Poppins" size="18.0" />
+            </font></Label>
+        <Button layoutX="630.0" layoutY="579.0" mnemonicParsing="false" onAction="#addNewRecipeBtn" prefHeight="44.0" prefWidth="121.0" style="-fx-background-color: #2B7CDB;" text="ADD RECIPE " textFill="#faf5f5" AnchorPane.bottomAnchor="280.0" AnchorPane.leftAnchor="630.0" AnchorPane.topAnchor="579.0">
+            <font>
+                <Font name="Poppins" size="14.0" />
+            </font></Button>
+        <TextArea fx:id="recipeShortDesc" layoutX="13.0" layoutY="200.0" prefHeight="124.0" prefWidth="220.0" style="-fx-border-color: #2B7CDB; -fx-border-width: 2.92233;" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="200.0">
+        </TextArea>
+        <TextArea fx:id="recipeLongDesc" layoutX="251.0" layoutY="200.0" prefHeight="124.0" prefWidth="236.0" style="-fx-border-color: #2B7CDB; -fx-border-width: 2.92233;" AnchorPane.topAnchor="200.0">
+        </TextArea>
+
+        <Label fx:id="tagsLabel" layoutX="13.0" layoutY="342.0" prefHeight="27.0" prefWidth="740.0" AnchorPane.bottomAnchor="533.8" AnchorPane.leftAnchor="10.0">
+            <font>
+                <Font name="Poppins" size="18.0" />
+            </font></Label>
+        <TextField fx:id="tagName" layoutX="253.0" layoutY="382.0" prefHeight="45.0" prefWidth="266.0" promptText="or type in a new one" style="-fx-border-color: #2B7CDB; -fx-border-width: 2.92233;" AnchorPane.leftAnchor="253.0" AnchorPane.topAnchor="374.0">
+            <font>
+                <Font name="Poppins" size="18.0" />
+            </font></TextField>
+        <ComboBox fx:id="tagsDropdown" layoutX="13.0" layoutY="374.0" onAction="#onTagsDropdown" prefHeight="45.0" prefWidth="219.0" promptText="Select an existing tag..." style="-fx-border-color: #2B7CDB; -fx-border-width: 2.92233;" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="374.0">
+        </ComboBox>
+        <Button layoutX="517.0" layoutY="374.0" mnemonicParsing="false" onAction="#onAddTag" prefHeight="44.0" prefWidth="82.0" style="-fx-background-color: #2B7CDB;" text="ADD TAG" textFill="#faf5f5" AnchorPane.topAnchor="374.0">
+            <font>
+                <Font name="Poppins" size="14.0" />
+            </font></Button>
+
+        <Label layoutX="10.0" layoutY="434.0" prefHeight="27.0" prefWidth="106.0" text="Ingredients" AnchorPane.leftAnchor="10.0">
+            <font>
+                <Font name="Poppins" size="18.0" />
+            </font></Label>
+        <TextField fx:id="ingredientAmount" layoutX="10.0" layoutY="464.0" prefHeight="45.0" prefWidth="121.0" promptText="amount" style="-fx-border-color: #2B7CDB; -fx-border-width: 2.92233;" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="464.0">
+            <font>
+                <Font name="Poppins" size="18.0" />
+            </font></TextField>
+        <ComboBox fx:id="ingredientUnit" layoutX="146.0" layoutY="464.0" onAction="#onTagsDropdown" prefHeight="45.0" prefWidth="170.0" promptText="unit" style="-fx-border-color: #2B7CDB; -fx-border-width: 2.92233;" AnchorPane.topAnchor="464.0">
+        </ComboBox>
+        <TextField fx:id="ingredientName" layoutX="321.0" layoutY="464.0" prefHeight="45.0" prefWidth="281.0" promptText="ingredient name" style="-fx-border-color: #2B7CDB; -fx-border-width: 2.92233;" AnchorPane.rightAnchor="235.0" AnchorPane.topAnchor="464.0">
+            <font>
+                <Font name="Poppins" size="18.0" />
+            </font></TextField>
+        <Button layoutX="626.0" layoutY="464.0" mnemonicParsing="false" onAction="#onAddIngredient" prefHeight="44.0" prefWidth="130.0" style="-fx-background-color: #2B7CDB;" text="ADD INGREDIENT" textFill="#faf5f5" AnchorPane.topAnchor="464.0">
+            <font>
+                <Font name="Poppins" size="14.0" />
+            </font></Button>
+        <Label fx:id="ingredientsLabel" alignment="TOP_LEFT" layoutX="14.0" layoutY="533.0" prefHeight="95.0" prefWidth="592.0" AnchorPane.bottomAnchor="280.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="235.0" />
+
+
+    </children>
+</AnchorPane>

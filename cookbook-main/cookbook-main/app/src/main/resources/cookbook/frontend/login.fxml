@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="359.0" prefWidth="307.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="cookbook.frontend.LoginController">
+   <children>
+      <ImageView fitHeight="169.0" fitWidth="285.0" layoutX="12.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="176.0" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="14.0">
+         <image>
+            <Image url="@../images/Capture.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="31.0" layoutY="208.0" text="Username" AnchorPane.leftAnchor="20.0">
+         <font>
+            <Font name="Poppins" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="user" layoutX="121.0" layoutY="205.0" prefHeight="25.0" prefWidth="164.0" AnchorPane.rightAnchor="22.0" />
+      <PasswordField fx:id="passwordtext" layoutX="121.0" layoutY="248.0" prefHeight="26.0" prefWidth="164.0" style="-fx-border-width: 2.92233;" AnchorPane.rightAnchor="22.0" />
+      <Label layoutX="33.0" layoutY="251.0" text="password" AnchorPane.leftAnchor="20.0">
+         <font>
+            <Font name="Poppins" size="15.0" />
+         </font>
+      </Label>
+      <Button fx:id="loginButton" layoutX="128.0" layoutY="286.0" mnemonicParsing="false" onAction="#moveToHomePage" prefHeight="28.0" prefWidth="149.0" text="Login" textFill="#0b0000">
+         <font>
+            <Font name="Poppins" size="14.0" />
+         </font></Button>
+      <Label layoutX="100.0" layoutY="330.0" prefHeight="15.0" prefWidth="133.0" text="Hydrogen Cooking Book" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="74.0">
+         <font>
+            <Font name="Poppins" size="10.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

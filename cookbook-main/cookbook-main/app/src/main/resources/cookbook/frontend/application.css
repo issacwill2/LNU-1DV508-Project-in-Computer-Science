@@ -1,0 +1,14 @@
+.root {
+    -fx-font-family: "Poppins";
+}
+
+.text-field, .text-area, .combo-box {
+    -fx-border-radius: 3.5px;
+    -fx-background-radius: 3.5px;
+}
+
+.noheader .column-header-background {
+    -fx-max-height: 0;
+    -fx-pref-height: 0;
+    -fx-min-height: 0;
+}

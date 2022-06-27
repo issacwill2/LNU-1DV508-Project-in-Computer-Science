@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="723.0" prefWidth="1064.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="cookbook.frontend.FirstPageController">
+   <children>
+      <Separator layoutX="83.0" orientation="VERTICAL" prefHeight="723.0" prefWidth="8.0" style="-fx-background-color: #2B7CDB;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="966.0" AnchorPane.topAnchor="0.0" />
+      <VBox layoutX="-1.0" prefHeight="723.0" prefWidth="90.0" style="-fx-background-color: White;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="971.0">
+         <children>
+            <Button fx:id="homebtn" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#homebtn" prefHeight="103.0" prefWidth="90.0" style="-fx-background-color: transparent;">
+               <graphic>
+                  <ImageView fitHeight="26.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/boxicons/home-alt-2-solid-24.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="addbutton" layoutX="10.0" layoutY="60.0" mnemonicParsing="false" onAction="#addNewRecipe" prefHeight="103.0" prefWidth="90.0" style="-fx-background-color: transparent;">
+               <graphic>
+                  <ImageView fitHeight="28.0" fitWidth="38.0" onDragDetected="#addNewRecipe" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/boxicons/plus-square-solid-24.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="messagebutton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#checkInbox" prefHeight="103.0" prefWidth="90.0" style="-fx-background-color: transparent;">
+               <graphic>
+                  <ImageView fitHeight="31.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/boxicons/chat-solid-24.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="weeklistbutton" layoutX="10.0" layoutY="110.0" mnemonicParsing="false" onAction="#calendarButton" prefHeight="103.0" prefWidth="90.0" style="-fx-background-color: transparent;">
+               <graphic>
+                  <ImageView fitHeight="31.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/boxicons/calendar-solid-24.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="helpbutton" layoutX="10.0" layoutY="210.0" mnemonicParsing="false" onAction="#helpbtn" prefHeight="103.0" prefWidth="90.0" style="-fx-background-color: transparent;">
+               <graphic>
+                  <ImageView fitHeight="26.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/boxicons/help-circle-solid-24.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="adminPanel" mnemonicParsing="false" onAction="#adminPannelAction" prefHeight="103.0" prefWidth="90.0" style="-fx-background-color: transparent;">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/boxicons/user-account-solid-24.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button fx:id="signoutButton" layoutX="10.0" layoutY="480.0" mnemonicParsing="false" onAction="#signoutbtn" prefHeight="103.0" prefWidth="90.0" style="-fx-background-color: transparent;">
+               <graphic>
+                  <ImageView fitHeight="31.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/boxicons/log-out-circle-solid-24.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </VBox>
+      <AnchorPane fx:id="root" layoutX="98.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="723.0" prefWidth="974.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="98.0" AnchorPane.rightAnchor="-8.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="569.0" fitWidth="749.0" layoutX="113.0" layoutY="80.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="80.81756591796875" AnchorPane.leftAnchor="113.0" AnchorPane.rightAnchor="112.0" AnchorPane.topAnchor="80.0">
+               <image>
+                  <Image url="@../images/cookanmi.gif" />
+               </image>
+            </ImageView>
+            <Pane layoutX="213.0" layoutY="16.0" prefHeight="62.0" prefWidth="520.0" style="-fx-background-color: transparent;">
+               <children>
+                  <Label fx:id="UserName" alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="12.0" prefHeight="62.0" prefWidth="497.0">
+                     <font>
+                        <Font name="Poppins" size="36.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
